@@ -10,8 +10,6 @@ const NavBtn = (props) => {
       props.titleClicked("events");
     } else if (e.target.textContent === "Krawiectwo") {
       props.titleClicked("sewing");
-    } else {
-      props.titleClicked("p-cars");
     }
   };
   const portfolioTitleClick = (portfolioTitle) => {
