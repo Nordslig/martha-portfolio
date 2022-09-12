@@ -1,4 +1,5 @@
 import NavBtnPortf from "./NavBtnPortf";
+import classes from "./NavBtn.module.css";
 
 const NavBtn = (props) => {
   const titleClick = (e) => {
@@ -17,9 +18,15 @@ const NavBtn = (props) => {
   };
 
   return props.title === "Portfolio" ? (
-    <NavBtnPortf title={props.title} portfolioChoice={portfolioTitleClick} />
+    <NavBtnPortf
+      title={props.title}
+      portfolioChoice={portfolioTitleClick}
+      className={classes["nav-btn"]}
+    />
   ) : (
-    <li onClick={titleClick}>{props.title}</li>
+    <li className={classes["nav-btn"]} onClick={titleClick}>
+      {props.title}
+    </li>
   );
 };
 

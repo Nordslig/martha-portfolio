@@ -1,4 +1,5 @@
 import { useState } from "react";
+import classes from "./NavBtnPortf.module.css";
 
 import car from "../img/car.png";
 import abstra from "../img/abstraction.png";
@@ -14,33 +15,45 @@ const NavBtnPortf = (props) => {
   };
 
   const portfolioClick = (e) => {
-    e.target.classList.contains("cars-title")
-      ? props.portfolioChoice("p-cars")
-      : props.portfolioChoice("p-abstra");
+    if (e.target.classList.contains("cars-title")) {
+      props.portfolioChoice("p-cars");
+    } else if (e.target.classList.contains("abstra-title")) {
+      props.portfolioChoice("p-abstra");
+    }
   };
 
   return (
-    <li onMouseEnter={hoverOnHandler} onMouseLeave={hoverOffHandler}>
+    <li
+      onMouseEnter={hoverOnHandler}
+      onMouseLeave={hoverOffHandler}
+      className={`${classes["btn-portf"]} ${props.className}`}
+    >
       {props.title}
       {isHoverOn ? (
-        <ul>
-          <li onClick={portfolioClick} className="cars-title">
+        <ul className={classes["btn-portf__choice-box"]}>
+          <li
+            className={`cars-title ${classes["btn-portf__choice"]}`}
+            onClick={portfolioClick}
+          >
             <p className="cars-title">Auta</p>
             <img
               src={car}
               alt="samochód"
-              width="10%"
               height="auto"
-              className="cars-title"
+              width="100%"
+              className={`cars-title ${classes["btn-portf__choice-img"]}`}
             />
           </li>
-          <li className="abstra-title" onClick={portfolioClick}>
+          <li
+            className={`abstra-title ${classes["btn-portf__choice"]}`}
+            onClick={portfolioClick}
+          >
             <p className="abstra-title">Abstrakcja</p>
             <img
-              className="abstra-title"
+              className={`abstra-title ${classes["btn-portf__choice-img"]}`}
               src={abstra}
               alt="abstrakcja"
-              width="10%"
+              width="100%"
               height="auto"
             />
           </li>

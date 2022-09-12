@@ -1,0 +1,29 @@
+.btn-portf {
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.btn-portf__choice-box {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  display: flex;
+  width: 80%;
+  transform: translateX(-50%);
+  justify-content: center;
+  list-style: none;
+  border: black solid 2px;
+}
+
+.btn-portf__choice {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 0.5rem;
+}
+
+.btn-portf__choice-img {
+  width: 100%;
+  height: 50%;
+}

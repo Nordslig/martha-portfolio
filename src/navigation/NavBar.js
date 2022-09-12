@@ -1,4 +1,5 @@
 import NavBtn from "./NavBtn";
+import classes from "./NavBar.module.css";
 
 const NavBar = (props) => {
   const tabNames = [
@@ -15,7 +16,7 @@ const NavBar = (props) => {
 
   return (
     <nav>
-      <ul>
+      <ul className={classes["nav-bar"]}>
         <NavBtn title={tabNames[0]} titleClicked={choosePageHandler} />
         <NavBtn title={tabNames[1]} titleClicked={choosePageHandler} />
         <NavBtn title={tabNames[2]} titleClicked={choosePageHandler} />
