@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import CurrentPage from "./CurrentPage";
-import NavBar from "./navigation/NavBar";
+import CurrentPage from "./components/CurrentPage";
+import NavBar from "./components/navigation/NavBar";
 
 import logo from "./img/logo.png";
 

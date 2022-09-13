@@ -1,8 +1,8 @@
 import { useState } from "react";
 import classes from "./NavBtnPortf.module.css";
 
-import car from "../img/car.png";
-import abstra from "../img/abstraction.png";
+import car from "../../img/car.png";
+import abstra from "../../img/abstraction.png";
 
 const NavBtnPortf = (props) => {
   const [isHoverOn, setIsHoverOn] = useState(false);

@@ -7,7 +7,7 @@ const NavBar = (props) => {
     "O mnie",
     "Portfolio",
     "Wydarzenia",
-    "Krawiectwo",
+    "Fashion Design",
   ];
 
   const choosePageHandler = (title) => {

@@ -9,7 +9,7 @@ const NavBtn = (props) => {
       props.titleClicked("about");
     } else if (e.target.textContent === "Wydarzenia") {
       props.titleClicked("events");
-    } else if (e.target.textContent === "Krawiectwo") {
+    } else if (e.target.textContent === "Fashion Design") {
       props.titleClicked("sewing");
     }
   };
