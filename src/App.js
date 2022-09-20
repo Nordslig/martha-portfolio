@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import CurrentPage from "./components/CurrentPage";
 import NavBar from "./components/navigation/NavBar";
@@ -15,20 +15,24 @@ function App() {
   };
 
   return (
-    <div style={{ minHeight: "150vh" }}>
+    <React.Fragment>
       <header>
         <img src={logo} alt="logo" width="auto" height="auto" />
       </header>
       <NavBar onNavClick={navClickHandler} />
       <CurrentPage page={actualPage} />
-      <footer className={classes["contact-footer"]}>
-        <a href="https://www.instagram.com/marthano1/">Instagram</a>
-        <a href="https://www.facebook.com/marthano1marthano1">Facebook</a>
-        <p>&#169;Copyrights to Martha Matuszczyk-Romańska</p>
-        <a href="tel:+532917446">Zadzwoń do mnie</a>
-        <a href="mailto: martu.matuszczyk@gmail.com">Napisz do mnie</a>
+      <footer className={classes.footer}>
+        <div className={classes["footer__contact"]}>
+          <a href="https://www.instagram.com/marthano1/">Instagram</a>
+          <a href="https://www.facebook.com/marthano1marthano1">Facebook</a>
+        </div>
+        <div className={classes["footer__contact"]}>
+          <a href="tel:+532917446">Telefon</a>
+          <a href="mailto: martu.matuszczyk@gmail.com">E-mail</a>
+        </div>
+        <p>&#169;Copyrights Martha Matuszczyk-Romańska</p>
       </footer>
-    </div>
+    </React.Fragment>
   );
 }
 

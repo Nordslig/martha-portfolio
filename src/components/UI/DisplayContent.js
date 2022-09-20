@@ -1,10 +1,16 @@
+import allImg from "../AllImages";
 import EventDesc from "../EventDesc";
 import ImgDesc from "../ImgDesc";
 
 const DisplayContent = (props) => {
   const arr = [60, 25, 38];
   const objArr = [
-    { imgTitle: "BMW", size: "50x50", desc: "Obraz BMW z serii LEGENDS" },
+    {
+      image: allImg[0],
+      imgTitle: "BMW",
+      size: "50x50",
+      desc: "Obraz BMW z serii LEGENDS",
+    },
     {
       imgTitle: "Audi",
       size: "70x50",
@@ -63,6 +69,7 @@ const DisplayContent = (props) => {
         ? objArr.map((obj) => {
             return (
               <ImgDesc
+                image={obj.image}
                 imgTitle={obj.imgTitle}
                 size={obj.size}
                 desc={obj.desc}

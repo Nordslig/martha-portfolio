@@ -1,0 +1,30 @@
+.img-description__title {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: baseline;
+  width: 80%;
+  margin: 0 auto;
+  padding: 0.5rem;
+}
+
+.img-description__title h3 {
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+
+.img-description__title p {
+  font-size: 0.7rem;
+}
+
+.img-description span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.img-description p {
+  text-align: center;
+  text-align: justify;
+  margin: 0.3rem 1rem;
+}
