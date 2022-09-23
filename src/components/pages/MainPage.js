@@ -1,4 +1,4 @@
-import React from "react";
+import { Fragment } from "react";
 import abstra from "../../img/abstraction.png";
 import lambo from "../../img/lambo.jpg";
 import ImgDesc from "../ImgDesc";
@@ -8,7 +8,7 @@ import classes from "./MainPage.module.css";
 
 const MainPage = () => {
   return (
-    <React.Fragment>
+    <Fragment>
       <section>
         <h2>Ja jestem Marta i witam Cię na mojej stronie :D </h2>
         <img src={abstra} width="150px" height="200px" alt="Marta profilowe" />
@@ -19,6 +19,7 @@ const MainPage = () => {
           consequuntur molestiae.
         </p>
       </section>
+      <div className={classes.line} />
       <section className={classes["last-img"]}>
         <h3>Mój ostatni obraz:</h3>
         <ImgDesc
@@ -31,15 +32,17 @@ const MainPage = () => {
           date="4/6/2022"
         />
       </section>
-      <section>
+      <div className={classes.line} />
+      <section className={classes.event}>
         <h3>Najszybciej spotkasz mnie:</h3>
         <NextEvent
           eventName={`CarFest Bielsko-Biała`}
-          eventDesc="CAR FEST DUMMY TEXT CAR FEST DUMMY TEXT"
+          eventDesc="CAR FEST DUMMY TEXT CAR FEST DUMMY TEXT DUMMY TEXT CAR FEST DUMMY TEXT"
           date="20/12/2024"
         />
       </section>
-    </React.Fragment>
+      <div className={classes.line} />
+    </Fragment>
   );
 };
 export default MainPage;

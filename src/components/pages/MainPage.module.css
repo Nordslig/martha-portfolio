@@ -1,4 +1,5 @@
-.last-img > h3 {
+.last-img > h3,
+.event > h3 {
   text-align: center;
   padding: 0.5rem 0.2rem;
   font-style: italic;
@@ -9,4 +10,11 @@
   width: 60%;
   height: auto;
   margin: 0 auto;
+}
+
+.line {
+  margin: 5% auto;
+  width: 60%;
+  height: 1px;
+  background-color: black;
 }
