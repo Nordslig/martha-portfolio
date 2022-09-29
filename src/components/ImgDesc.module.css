@@ -4,7 +4,7 @@
   align-items: flex-end;
   width: 80%;
   margin: 0 auto;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .img-description__title h3 {
