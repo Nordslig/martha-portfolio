@@ -2,6 +2,8 @@ import allImg from "../AllImages";
 import EventDesc from "../EventDesc";
 import ImgDesc from "../ImgDesc";
 
+import classes from "./DisplayContent.module.css";
+
 const DisplayContent = (props) => {
   const arr = [60, 25, 38];
   const objArr = [
@@ -12,11 +14,25 @@ const DisplayContent = (props) => {
       desc: "Obraz BMW z serii LEGENDS",
     },
     {
+      image: allImg[0],
       imgTitle: "Audi",
       size: "70x50",
       desc: "Obraz Audi wykonany na zamówienie",
     },
     {
+      image: allImg[0],
+      imgTitle: "Volvo",
+      size: `${arr[2]}cm x ${arr[0]}cm`,
+      desc: "Obraz Volvo wykonany na zamówienie",
+    },
+    {
+      image: allImg[0],
+      imgTitle: "Volvo",
+      size: `${arr[2]}cm x ${arr[0]}cm`,
+      desc: "Obraz Volvo wykonany na zamówienie",
+    },
+    {
+      image: allImg[0],
       imgTitle: "Volvo",
       size: `${arr[2]}cm x ${arr[0]}cm`,
       desc: "Obraz Volvo wykonany na zamówienie",
@@ -64,7 +80,7 @@ const DisplayContent = (props) => {
   ];
 
   return (
-    <section>
+    <section className={classes.portfolio}>
       {props.theme === "cars"
         ? objArr.map((obj) => {
             return (

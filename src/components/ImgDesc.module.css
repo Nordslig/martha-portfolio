@@ -1,3 +1,15 @@
+.painting {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.painting img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: auto;
+}
+
 .img-description__title {
   display: flex;
   justify-content: space-evenly;

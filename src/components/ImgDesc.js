@@ -2,7 +2,7 @@ import classes from "./ImgDesc.module.css";
 
 const ImgDesc = (props) => {
   return (
-    <article>
+    <article className={classes.painting}>
       <img
         src={props.image}
         alt={props.altText}
