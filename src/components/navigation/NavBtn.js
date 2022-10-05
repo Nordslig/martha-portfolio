@@ -1,9 +1,13 @@
 import NavBtnPortf from "./NavBtnPortf";
 import classes from "./NavBtn.module.css";
 
+import { Fragment } from "react";
+
 const NavBtn = (props) => {
   const titleClick = (e) => {
     if (e.target.textContent === "Strona główna") {
+      props.titleClicked("main");
+    } else if (e.target.textContent === "") {
       props.titleClicked("main");
     } else if (e.target.textContent === "O mnie") {
       props.titleClicked("about");
@@ -17,16 +21,20 @@ const NavBtn = (props) => {
     props.titleClicked(portfolioTitle === "p-cars" ? "p-cars" : "p-abstra");
   };
 
-  return props.title === "Portfolio" ? (
-    <NavBtnPortf
-      title={props.title}
-      portfolioChoice={portfolioTitleClick}
-      className={classes["nav-btn"]}
-    />
-  ) : (
-    <li className={classes["nav-btn"]} onClick={titleClick}>
-      {props.title}
-    </li>
+  return (
+    <Fragment>
+      {props.title === "Portfolio" ? (
+        <NavBtnPortf
+          title={props.title}
+          portfolioChoice={portfolioTitleClick}
+          className={classes["nav-btn"]}
+        />
+      ) : (
+        <li className={classes["nav-btn"]} onClick={titleClick}>
+          {props.title}
+        </li>
+      )}
+    </Fragment>
   );
 };
 

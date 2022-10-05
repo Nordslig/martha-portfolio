@@ -2,26 +2,19 @@ import NavBtn from "./NavBtn";
 import classes from "./NavBar.module.css";
 
 const NavBar = (props) => {
-  const tabNames = [
-    "Strona główna",
-    "O mnie",
-    "Portfolio",
-    "Wydarzenia",
-    "Fashion Design",
-  ];
-
-  const choosePageHandler = (title) => {
-    props.onNavClick(title);
-  };
+  // const navVisible = {classes['nav-list']}
+  const navVisible = `${classes["nav-list"]} ${
+    props.navShown ? `${classes.shown}` : `${classes.hide}`
+  }`;
 
   return (
-    <nav>
-      <ul className={classes["nav-bar"]}>
-        <NavBtn title={tabNames[0]} titleClicked={choosePageHandler} />
-        <NavBtn title={tabNames[1]} titleClicked={choosePageHandler} />
-        <NavBtn title={tabNames[2]} titleClicked={choosePageHandler} />
-        <NavBtn title={tabNames[3]} titleClicked={choosePageHandler} />
-        <NavBtn title={tabNames[4]} titleClicked={choosePageHandler} />
+    <nav className={classes["nav-bar"]}>
+      <ul className={navVisible}>
+        <NavBtn title={"Strona główna"} titleClicked={props.onNavClick} />
+        <NavBtn title={"O mnie"} titleClicked={props.onNavClick} />
+        <NavBtn title={"Portfolio"} titleClicked={props.onNavClick} />
+        <NavBtn title={"Wydarzenia"} titleClicked={props.onNavClick} />
+        <NavBtn title={"Fashion Design"} titleClicked={props.onNavClick} />
       </ul>
     </nav>
   );

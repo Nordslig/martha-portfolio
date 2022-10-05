@@ -1,27 +1,44 @@
-import React, { useState } from "react";
+import { Fragment, useState } from "react";
+
+import { faBars, faX } from "@fortawesome/free-solid-svg-icons";
 
 import CurrentPage from "./components/CurrentPage";
 import NavBar from "./components/navigation/NavBar";
 
-import logo from "./img/logo.png";
-
 import classes from "./App.module.css";
+import Button from "./components/UI/Button";
+
+import logo from "./img/logo.jpg";
 
 function App() {
   const [actualPage, setActualPage] = useState("main");
+  const [showNavMobile, setShowNavMobile] = useState(false);
 
   const navClickHandler = (title) => {
     setActualPage(title);
   };
 
+  const showNav = () => {
+    setShowNavMobile((prevShowNavMobile) => !prevShowNavMobile);
+  };
+
+  const hideNav = () => {
+    setShowNavMobile(false);
+  };
+
   return (
-    <React.Fragment>
+    <Fragment>
       <header>
-        <img src={logo} alt="logo" width="auto" height="auto" />
+        <img src={logo} alt="logo" width="40%" height="auto" />
+        <Button
+          value={showNavMobile ? faX : faBars}
+          type="button"
+          onClick={showNav}
+        />
+        <NavBar navShown={showNavMobile} onNavClick={navClickHandler} />
       </header>
-      <NavBar onNavClick={navClickHandler} />
-      <CurrentPage page={actualPage} />
-      <footer className={classes.footer}>
+      <CurrentPage page={actualPage} hideNav={hideNav} />
+      <footer className={classes.footer} onClick={hideNav}>
         <div className={classes["footer__contact"]}>
           <a href="https://www.instagram.com/marthano1/">Instagram</a>
           <a href="https://www.facebook.com/marthano1marthano1">Facebook</a>
@@ -32,7 +49,7 @@ function App() {
         </div>
         <p>&#169;Copyrights Martha Matuszczyk-Romańska</p>
       </footer>
-    </React.Fragment>
+    </Fragment>
   );
 }
 

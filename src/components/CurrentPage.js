@@ -8,13 +8,22 @@ import PortfolioPage from "./pages/PortfolioPage";
 
 const CurrentPage = (props) => {
   return (
-    <main>
-      {props.page === "main" ? <MainPage /> : ""}
-      {props.page === "about" ? <AboutPage /> : ""}
-      {props.page === "p-cars" ? <PortfolioPage theme="cars" /> : ""}
-      {props.page === "p-abstra" ? <PortfolioPage theme="abstra" /> : ""}
-      {props.page === "events" ? <EventsPage /> : ""}
-      {props.page === "sewing" ? <SewingPage /> : ""}
+    <main onClick={props.hideNav}>
+      {props.page === "main" ? (
+        <MainPage />
+      ) : props.page === "about" ? (
+        <AboutPage />
+      ) : props.page === "p-cars" ? (
+        <PortfolioPage theme="cars" />
+      ) : props.page === "p-abstra" ? (
+        <PortfolioPage theme="abstra" />
+      ) : props.page === "events" ? (
+        <EventsPage />
+      ) : props.page === "sewing" ? (
+        <SewingPage />
+      ) : (
+        ""
+      )}
     </main>
   );
 };
