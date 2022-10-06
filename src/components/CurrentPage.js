@@ -3,8 +3,8 @@ import AboutPage from "./pages/AboutPage";
 // import PortfolioPageCars from "./pages/PortfolioPageCars.js";
 // import PortfolioPageAbstra from "./pages/PortfolioPageAbstra";
 import EventsPage from "./pages/EventsPage";
-import SewingPage from "./pages/SewingPage";
 import PortfolioPage from "./pages/PortfolioPage";
+import FashionDesignPage from "./pages/FashionDesignPage";
 
 const CurrentPage = (props) => {
   return (
@@ -19,8 +19,8 @@ const CurrentPage = (props) => {
         <PortfolioPage theme="abstra" />
       ) : props.page === "events" ? (
         <EventsPage />
-      ) : props.page === "sewing" ? (
-        <SewingPage />
+      ) : props.page === "fashion" ? (
+        <FashionDesignPage />
       ) : (
         ""
       )}

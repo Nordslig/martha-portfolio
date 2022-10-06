@@ -15,7 +15,7 @@
 .event > h3 {
   text-align: center;
   padding: 0.5rem 0.2rem;
-  font-style: italic;
+  text-transform: uppercase;
 }
 .short-desc img,
 .last-img img {

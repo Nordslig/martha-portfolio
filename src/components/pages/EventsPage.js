@@ -1,9 +1,12 @@
+import { Fragment } from "react";
+import classes from "../EventDesc.module.css";
+
 import DisplayContent from "../UI/DisplayContent";
 
 const EventsPage = () => {
   return (
-    <div>
-      <section>
+    <Fragment>
+      <section className={classes["event__intro"]}>
         <h2>Wydarzenia</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla magnam
@@ -13,7 +16,7 @@ const EventsPage = () => {
         </p>
       </section>
       <DisplayContent theme="events" />
-    </div>
+    </Fragment>
   );
 };
 export default EventsPage;

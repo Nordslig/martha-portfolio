@@ -8,14 +8,12 @@ const NavBtn = (props) => {
     props.hideNav(false);
     if (e.target.textContent === "Strona główna") {
       props.titleClicked("main");
-    } else if (e.target.textContent === "") {
-      props.titleClicked("main");
     } else if (e.target.textContent === "O mnie") {
       props.titleClicked("about");
     } else if (e.target.textContent === "Wydarzenia") {
       props.titleClicked("events");
     } else if (e.target.textContent === "Fashion Design") {
-      props.titleClicked("sewing");
+      props.titleClicked("fashion");
     }
   };
   const portfolioTitleClick = (portfolioTitle) => {
