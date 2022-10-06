@@ -22,7 +22,7 @@ function App() {
     setShowNavMobile((prevShowNavMobile) => !prevShowNavMobile);
   };
 
-  const hideNav = () => {
+  const hideNavHandler = () => {
     setShowNavMobile(false);
   };
 
@@ -35,10 +35,14 @@ function App() {
           type="button"
           onClick={showNav}
         />
-        <NavBar navShown={showNavMobile} onNavClick={navClickHandler} />
+        <NavBar
+          hideNav={hideNavHandler}
+          navShown={showNavMobile}
+          onNavClick={navClickHandler}
+        />
       </header>
-      <CurrentPage page={actualPage} hideNav={hideNav} />
-      <footer className={classes.footer} onClick={hideNav}>
+      <CurrentPage page={actualPage} hideNav={hideNavHandler} />
+      <footer className={classes.footer} onClick={hideNavHandler}>
         <div className={classes["footer__contact"]}>
           <a href="https://www.instagram.com/marthano1/">Instagram</a>
           <a href="https://www.facebook.com/marthano1marthano1">Facebook</a>

@@ -1,0 +1,23 @@
+.about h3 {
+  margin: 0.4rem 0.4rem 0.6rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.about p {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+}
+
+.about img {
+  display: block;
+  margin: 0 auto;
+}
+
+.about__short-description {
+}
+.about__painting {
+}
+.about__me {
+}

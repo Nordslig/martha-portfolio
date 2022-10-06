@@ -15,6 +15,7 @@ const NavBtnPortf = (props) => {
   };
 
   const portfolioClick = (e) => {
+    props.hideNav(false);
     if (e.target.classList.contains("cars-title")) {
       props.portfolioChoice("p-cars");
     } else if (e.target.classList.contains("abstra-title")) {

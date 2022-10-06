@@ -5,6 +5,7 @@ import { Fragment } from "react";
 
 const NavBtn = (props) => {
   const titleClick = (e) => {
+    props.hideNav(false);
     if (e.target.textContent === "Strona główna") {
       props.titleClicked("main");
     } else if (e.target.textContent === "") {
@@ -28,6 +29,7 @@ const NavBtn = (props) => {
           title={props.title}
           portfolioChoice={portfolioTitleClick}
           className={classes["nav-btn"]}
+          hideNav={props.hideNav}
         />
       ) : (
         <li className={classes["nav-btn"]} onClick={titleClick}>

@@ -19,7 +19,7 @@ const MainPage = () => {
           consequuntur molestiae.
         </p>
       </section>
-      <div className={classes.line} />
+      <div className="line" />
       <div className={classes.box}>
         <section className={classes["last-img"]}>
           <h3>Mój ostatni obraz:</h3>
@@ -33,7 +33,7 @@ const MainPage = () => {
             date="4/6/2022"
           />
         </section>
-        <div className={classes.line} />
+        <div className="line" />
         <section className={classes.event}>
           <h3>Najszybciej spotkasz mnie:</h3>
           <NextEvent
@@ -43,7 +43,7 @@ const MainPage = () => {
           />
         </section>
       </div>
-      <div className={classes.line} />
+      <div className="line" />
     </Fragment>
   );
 };

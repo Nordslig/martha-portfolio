@@ -2,15 +2,6 @@
   position: relative;
   top: 0;
   left: 0;
-  /* overflow: hidden; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  width: 80%;
-  margin: 0 auto;*/
-  /* position: relative;
-  top: 0;
-  left: 0; */
 }
 .nav-list {
   display: none;
@@ -24,7 +15,7 @@
 .nav-list.shown {
   position: absolute;
   top: 0;
-  /* left: 0; */
+  left: 0;
   display: flex;
   flex-direction: column;
   animation: list 0.3s both;

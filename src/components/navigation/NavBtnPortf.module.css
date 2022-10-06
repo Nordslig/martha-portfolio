@@ -9,7 +9,8 @@
   top: 100%;
   left: 50%;
   display: flex;
-  width: 80%;
+  /* width: 80%; */
+  width: 70vw;
   transform: translateX(-50%);
   justify-content: center;
   list-style: none;
@@ -22,6 +23,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   padding: 0 0.5rem;
+  min-width: 50%;
 }
 
 .btn-portf__choice-img {
