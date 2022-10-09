@@ -21,6 +21,12 @@
   animation: list 0.3s both;
 }
 
+@media (orientation: landscape) {
+  .nav-list.shown {
+    top: -100%;
+  }
+}
+
 @keyframes list {
   from {
     opacity: 0;

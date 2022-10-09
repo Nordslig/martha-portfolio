@@ -34,6 +34,7 @@ function App() {
           value={showNavMobile ? faX : faBars}
           type="button"
           onClick={showNav}
+          name="showNav"
         />
         <NavBar
           hideNav={hideNavHandler}
@@ -48,7 +49,7 @@ function App() {
           <a href="https://www.facebook.com/marthano1marthano1">Facebook</a>
         </div>
         <div className={classes["footer__contact"]}>
-          <a href="tel:+532917446">Telefon</a>
+          <a href="tel:+123456789">Telefon</a>
           <a href="mailto: martu.matuszczyk@gmail.com">E-mail</a>
         </div>
         <p>&#169;Copyrights Martha Matuszczyk-Romańska</p>

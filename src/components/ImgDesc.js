@@ -17,6 +17,7 @@ const ImgDesc = (props) => {
         <span>{props.size}</span>
         <p>{props.desc}</p>
       </section>
+      <div className="line"></div>
     </article>
   );
 };

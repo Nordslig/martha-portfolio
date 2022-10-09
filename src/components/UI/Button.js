@@ -8,6 +8,7 @@ const Button = (props) => {
       className={classes.button}
       type={props.type}
       onClick={props.onClick}
+      name={props.name}
     >
       <FontAwesomeIcon icon={props.value} />
     </button>

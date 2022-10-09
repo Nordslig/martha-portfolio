@@ -33,7 +33,6 @@ const MainPage = () => {
             date="4/6/2022"
           />
         </section>
-        <div className="line" />
         <section className={classes.event}>
           <h3>Najszybciej spotkasz mnie:</h3>
           <NextEvent
